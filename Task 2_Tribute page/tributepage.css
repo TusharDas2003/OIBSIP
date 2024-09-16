@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('backgrondimag.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    width: 100%; /* Optional, limits to full width of screen */
+    max-width: 800px; /* Adjust as needed */
+}
+
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #f06c6c;
+    font-size: 48px;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 5px solid #1a1717;
+}
+
+/* Content */
+.content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(230, 225, 225, 0.1);
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Quote Section */
+.quote {
+    background-color: rgba(175, 103, 31, 0.85);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.quote blockquote {
+    margin: 0;
+    padding-left: 10px;
+    border-left: 3px solid #f06c6c;
+}
+
+.quote p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
