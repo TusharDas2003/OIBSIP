@@ -15,32 +15,53 @@ function showRegister() {
     document.getElementById("register-container").style.display = "block";
 }
 
-// Basic login validation
-function validateLogin() {
-    const username = document.getElementById("login-username").value;
+// Login validation and AJAX request
+async function validateLogin() {
+    const email = document.getElementById("login-username").value;
     const password = document.getElementById("login-password").value;
 
-    if (username === "" || password === "") {
+    if (!email || !password) {
         alert("Please fill in both fields.");
-        return false;
+        return;
     }
 
-    alert("Login successful!");
-    return true;
+    const res = await fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+    if (data.token) {
+        alert('Login successful!');
+        localStorage.setItem('token', data.token);
+    } else {
+        alert(data.msg);
+    }
 }
 
-// Basic registration validation
-function validateRegister() {
+// Registration validation and AJAX request
+async function validateRegister() {
     const firstname = document.getElementById("register-firstname").value;
     const lastname = document.getElementById("register-lastname").value;
     const email = document.getElementById("register-email").value;
     const password = document.getElementById("register-password").value;
 
-    if (firstname === "" || lastname === "" || email === "" || password === "") {
+    if (!firstname || !lastname || !email || !password) {
         alert("Please fill in all fields.");
-        return false;
+        return;
     }
 
-    alert("Registration successful!");
-    return true;
+    const res = await fetch('/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ firstname, lastname, email, password })
+    });
+
+    const data = await res.json();
+    alert(data.msg);
 }
