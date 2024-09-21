@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.background {
+    background-image: url('backgroundimage.jpeg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.container {
+    max-width: 800px; /* Limit the width for better aesthetics */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the container's content */
+}
+
+.main {
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 500px; /* Controls the max width of the form */
+    width: 100%; /* Ensures responsiveness */
+    box-sizing: border-box; /* Makes padding count in total width */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.main h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+input {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #767474;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-bottom: 2px solid orange; /* Change color on focus */
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Slightly larger font */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+input[type=submit]:hover {
+    background-color: darkorange;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+}
